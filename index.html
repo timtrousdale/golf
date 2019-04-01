@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" defer></script>
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <div class="add-player-modal">
+    <div class="flex">
+      <div class="popup">
+        <i class=" floating-close fas fa-times" onclick="hide()"></i>
+        <input type="text" placeholder="Player Name">
+        <input type="number" placeholder="Handicap" value="0">
+        <select id="tee-select"></select>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="landing-page">
+      <div class="inside-blur">
+
+        <select aria-label="course select dropdown" class="course-select" onchange="getCourse(this.value)">
+          <option value="0">Select a Course</option>
+          <option disabled="disabled">----</option>
+        </select>
+
+        <div class="scoresheet">
+          <div class="total">
+            <div class="total-header">Total</div>
+          </div>
+          <div>
+            <div class="players-container">
+              <div class="players-header"><p>Players:</p></div>
+              <div class="players">
+
+
+              </div>
+              <div class="flex-center add-player">
+                <button onclick="show()">+ Add Player</button>
+              </div>
+            </div>
+          </div>
+          <div class="holes">
+            <!--<div class="hole"></div>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
+</html>

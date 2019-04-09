@@ -5,6 +5,13 @@ html, body {
   padding: 0;
 }
 
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -98,6 +105,12 @@ html, body {
 
 
           }
+          .player-total {
+            text-align: center;
+            border-bottom: 1px solid #dadfea;
+            height: 64px;
+
+          }
         }
 
         .players-container {
@@ -118,8 +131,11 @@ html, body {
 
 
             .player {
+              padding: 13px 13px 14px 13px;
+              font-size: 2em;
+
+              //TODO Fix This
               border-bottom: 1px solid #dadfea;
-              padding: 20px 10px 20px 10px;
             }
 
           }
@@ -132,21 +148,29 @@ html, body {
 
         }
 
-        .holes {
+        .score-column {
+          display: flex;
+          flex-direction: column;
+          overflow: scroll;
+        }
+
+        .holes, .player-scores {
           border-left: 1px solid #dadfea;
           display: flex;
           flex-direction: row;
           //margin-left: 10px;
 
           //scrolling
-          overflow: scroll;
+
           //height: 210px;
 
           .hole {
             border-right: 1px solid #dadfea;
-            padding: 10px;
+            padding: 10px 10px 0 10px;
             white-space: nowrap;
             width: 50px !important;
+
+
 
 
             .hole-number {
@@ -165,6 +189,33 @@ html, body {
           .hole:last-child {
             border: none;
           }
+
+
+          .score {
+            border-right: 1px solid #dadfea;
+            border-bottom: 1px solid #dadfea;
+            white-space: nowrap;
+            padding-right: 1px;
+            width: 70px !important;
+
+            .score-display {
+              white-space: nowrap;
+              width: 70px !important;
+            }
+
+            .score-input {
+              text-align: center;
+              border: none;
+              width: 67px;
+              height: 62px;
+              font-size: 1.5em;
+              border-bottom: 1px solid #dadfea;
+
+            }
+            .score-input:last-child {
+              border: none;
+            }
+          }
         }
       }
 
@@ -181,5 +232,18 @@ html, body {
     top: 0;
     left: -4px;
     //filter: blur(1px);
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop {
+    display: none;
   }
 }

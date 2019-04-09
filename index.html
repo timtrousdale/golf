@@ -18,6 +18,7 @@
         <input type="text" placeholder="Player Name">
         <input type="number" placeholder="Handicap" value="0">
         <select id="tee-select"></select>
+        <button onclick="addPlayer('tim', 2, 'white')">Add Player</button>
       </div>
     </div>
   </div>
@@ -27,13 +28,14 @@
       <div class="inside-blur">
 
         <select aria-label="course select dropdown" class="course-select" onchange="getCourse(this.value)">
-          <option value="0">Select a Course</option>
+          <!--<option value="0" class="mobile-only">Tap to Select a Course</option>-->
+          <option value="0" class="desktop">Select a Course</option>
           <option disabled="disabled">----</option>
         </select>
 
         <div class="scoresheet">
           <div class="total">
-            <div class="total-header">Total</div>
+            <div class="total-header">Total:</div>
           </div>
           <div>
             <div class="players-container">
@@ -47,8 +49,10 @@
               </div>
             </div>
           </div>
-          <div class="holes">
-            <!--<div class="hole"></div>-->
+          <div class="score-column">
+
+            <div class="holes">
+            </div>
           </div>
         </div>
       </div>

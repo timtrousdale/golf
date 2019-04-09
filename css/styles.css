@@ -5,6 +5,13 @@ html, body {
   padding: 0;
 }
 
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -90,6 +97,11 @@ html, body {
   border-bottom: 1px solid #dadfea;
   padding: 16px;
 }
+.container .landing-page .inside-blur .scoresheet .total .player-total {
+  text-align: center;
+  border-bottom: 1px solid #dadfea;
+  height: 64px;
+}
 .container .landing-page .inside-blur .scoresheet .players-container {
   border-top: 1px solid #dadfea;
   padding: 0 10px 10px 10px;
@@ -103,34 +115,61 @@ html, body {
   border-bottom: 1px solid #dadfea;
 }
 .container .landing-page .inside-blur .scoresheet .players-container .players .player {
+  padding: 13px 13px 14px 13px;
+  font-size: 2em;
   border-bottom: 1px solid #dadfea;
-  padding: 20px 10px 20px 10px;
 }
 .container .landing-page .inside-blur .scoresheet .players-container .add-player {
   padding-top: 25px;
   padding-bottom: 15px;
   width: 100%;
 }
-.container .landing-page .inside-blur .scoresheet .holes {
+.container .landing-page .inside-blur .scoresheet .score-column {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.container .landing-page .inside-blur .scoresheet .holes, .container .landing-page .inside-blur .scoresheet .player-scores {
   border-left: 1px solid #dadfea;
   display: flex;
   flex-direction: row;
-  overflow: scroll;
 }
-.container .landing-page .inside-blur .scoresheet .holes .hole {
+.container .landing-page .inside-blur .scoresheet .holes .hole, .container .landing-page .inside-blur .scoresheet .player-scores .hole {
   border-right: 1px solid #dadfea;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   white-space: nowrap;
   width: 50px !important;
 }
-.container .landing-page .inside-blur .scoresheet .holes .hole .hole-number {
+.container .landing-page .inside-blur .scoresheet .holes .hole .hole-number, .container .landing-page .inside-blur .scoresheet .player-scores .hole .hole-number {
   width: 50px;
   padding-top: 7px;
   padding-bottom: 16px;
   border-bottom: 1px solid #dadfea;
   text-align: center;
 }
-.container .landing-page .inside-blur .scoresheet .holes .hole:last-child {
+.container .landing-page .inside-blur .scoresheet .holes .hole:last-child, .container .landing-page .inside-blur .scoresheet .player-scores .hole:last-child {
+  border: none;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score, .container .landing-page .inside-blur .scoresheet .player-scores .score {
+  border-right: 1px solid #dadfea;
+  border-bottom: 1px solid #dadfea;
+  white-space: nowrap;
+  padding-right: 1px;
+  width: 70px !important;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score .score-display, .container .landing-page .inside-blur .scoresheet .player-scores .score .score-display {
+  white-space: nowrap;
+  width: 70px !important;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score .score-input, .container .landing-page .inside-blur .scoresheet .player-scores .score .score-input {
+  text-align: center;
+  border: none;
+  width: 67px;
+  height: 62px;
+  font-size: 1.5em;
+  border-bottom: 1px solid #dadfea;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score .score-input:last-child, .container .landing-page .inside-blur .scoresheet .player-scores .score .score-input:last-child {
   border: none;
 }
 .container .landing-page:after {
@@ -141,6 +180,20 @@ html, body {
   position: absolute;
   top: 0;
   left: -4px;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,3 @@
-
-
 // MODAL
 function show() {
     $('.add-player-modal').fadeIn(() => {
@@ -43,7 +41,7 @@ GETCourse.onreadystatechange = function () {
 };
 
 function getCourse(id) {
-    if (id !== 0) {
+    if (id !== '0') {
         GETCourse.open("GET", `https://golf-courses-api.herokuapp.com/courses/${id}`, true);
         GETCourse.send();
     }
@@ -51,7 +49,7 @@ function getCourse(id) {
 
 
 let columns = 18;
-let players = [];
+let players = 0;
 let game = {
     course: '',
     holes: 18,
@@ -60,17 +58,40 @@ let game = {
 };
 
 class Course {
-    constructor(name, holes, tees) {
-        this.name = name;
+    constructor(course, holes, tees) {
+        this.course = name;
         this.holes = holes;
-        this.tees = tees; // Should be an Array
         this.players = [];
     }
-
-    addPlayer(name, handicap, tee) {
-        $(".players").append(`<div class="player-${i}" id="${i}">${name}<div><p class="tee">${tee}</p></div></div>`);
-        this.players.push(new Player(name, handicap, tee))
+    getCourse() {
+        //TODO Add http call here
     }
+
+
+}
+
+function addPlayer(name, handicap, tee) {
+    players++;
+    $('.score-column').append(`<div class="player-scores player-${players}-scores"></div>`);
+    // this.players.push(new Player(name, handicap, tee));
+
+    for (let i = 0; i < 18; i++) {
+        console.log('ran');
+
+
+        $(`.player-${players}-scores`).append(`<div class="score" id="${players}-${i}"><input class="score-input" type="number"></div>`);
+    }
+
+
+
+    $(`.player-${players}-scores > div:nth-child(9)`).after(`<div class="score" id="${players}-in"><input readonly="true" class="score-input" type="number"></div>`);
+
+    $(`.player-${players}-scores`).append(`<div class="score" id="${players}-out"><input readonly class="score-input" type="number"></div>`);
+
+    $(".players").append(`<div class="player player-${players}" id="${players}">${name}</div>`);
+
+    $(".total").append(`<div class="player-total player-${players}" id="total-${players}"></div>`);
+
 }
 
 
@@ -80,20 +101,35 @@ class Player {
         this.handicap = handicap;
         this.tee = tee;
         this.scores = [];
+        this.in = 0;
+        this.out = 0;
 
     }
 
     score(hole, score) {
-        this.scores[holeNumber] = score
+        this.scores[hole] = score
     }
 
     rename(name) {
         this.name = name;
     }
+    getIn() {
+        let score = 0;
+        for (let i = 0; i < 9; i++) {
+            score += this.scores[i];
+        }
+    }
+    getOut() {
+        let score = 0;
+        for (let i = 9; i < 18; i++) {
+            score += this.scores[i];
+        }
+    }
 }
 
-function loadCourse() {
-    for (let i = 0; i < columns; i++) {
+(function(el) {
+
+    for (let i = 0; i < 18; i++) {
         let nth;
         switch (i) {
             case 0:
@@ -108,11 +144,11 @@ function loadCourse() {
             default:
                 nth = 'th';
         }
-        $(".holes").append(`<div class="hole" id="hole-${i}"><div class="hole-number">${i + 1}<span></span>${nth}</span></div></div>`);
+        $(el).append(`<div class="hole" id="hole-${i}"><div class="hole-number">${i + 1}<span></span>${nth}</span></div></div>`);
     }
-}
-
-loadCourse();
+    $(".holes > div:nth-child(9)").after(`<div class="hole" id=""><div class="hole-number">In</span></div></div>`);
+    $(".holes").append(`<div class="hole" id=""><div class="hole-number">Out</span></div></div>`);
+})('.holes');
 
 // TODO Change this to an add player function, and make the UI only let one player add at a time
 
@@ -190,3 +226,7 @@ loadCourse();
 // dataPromise.then(data => {
 //         console.log(`from .the ${data}`);
 //     });
+
+
+// TODO Remove this, it's for testing
+addPlayer('tim', 2, 'white');

@@ -30,13 +30,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/img/golf-course.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/img/panorama-2105955_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/js/semantic.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.html" afterDir="false" />
@@ -49,8 +44,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Golf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Golf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
@@ -79,14 +72,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.29598308">
+    <splitter split-orientation="horizontal" split-proportion="0.29175475">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="41">
-                  <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+                <state relative-caret-position="-144">
+                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -98,8 +91,15 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/scripts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="53">
-                  <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+                <state relative-caret-position="520">
+                  <caret line="150" column="27" lean-forward="true" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="n#!!block;n#insOuts#0;n#Course#0" />
+                    <element signature="n#!!block;n#getCourse#0;n#Course#0" />
+                    <element signature="e#3083#4210#0" />
+                    <element signature="e#4289#4796#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -107,8 +107,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/styles.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="403">
-                  <caret line="231" column="11" selection-start-line="231" selection-start-column="11" selection-end-line="231" selection-end-column="11" />
+                <state relative-caret-position="1894">
+                  <caret line="241" column="25" selection-start-line="241" selection-start-column="25" selection-end-line="241" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -127,6 +127,15 @@
       <find>show</find>
       <find>total</find>
       <find>over</find>
+      <find>players</find>
+      <find>numberofplayer</find>
+      <find>name</find>
+      <find>score</find>
+      <find>fetch</find>
+      <find>setpa</find>
+      <find>this.pars</find>
+      <find>holeCount</find>
+      <find>playerID</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,8 +144,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/styles.scss" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/styles.scss" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
       </list>
     </option>
@@ -153,8 +162,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -163,7 +173,30 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Golf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Golf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Golf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Golf" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Golf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Golf" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -203,12 +236,13 @@
       <updated>1554125957645</updated>
       <workItem from="1554125959369" duration="14835000" />
       <workItem from="1554434445870" duration="121000" />
-      <workItem from="1554732533483" duration="3643000" />
+      <workItem from="1554732533483" duration="10452000" />
+      <workItem from="1555124362605" duration="8750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18599000" />
+    <option name="totallyTimeSpent" value="34158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -238,24 +272,31 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/menu.css" />
-    <entry file="file://$PROJECT_DIR$/css/styles.scss">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="231" column="11" selection-start-line="231" selection-start-column="11" selection-end-line="231" selection-end-column="11" />
+        <state relative-caret-position="-144">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="1894">
+          <caret line="241" column="25" selection-start-line="241" selection-start-column="25" selection-end-line="241" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="520">
+          <caret line="150" column="27" lean-forward="true" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#insOuts#0;n#Course#0" />
+            <element signature="n#!!block;n#getCourse#0;n#Course#0" />
+            <element signature="e#3083#4210#0" />
+            <element signature="e#4289#4796#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,6 +12,26 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+::-webkit-input-placeholder {
+  font-size: 0.75em;
+  color: #dadfea;
+}
+
+::-moz-placeholder {
+  font-size: 0.75em;
+  color: #dadfea;
+}
+
+:-ms-input-placeholder {
+  font-size: 0.75em;
+  color: #dadfea;
+}
+
+::placeholder {
+  font-size: 0.75em;
+  color: #dadfea;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -151,6 +171,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
 }
 .container .landing-page .inside-blur .scoresheet .holes .score, .container .landing-page .inside-blur .scoresheet .player-scores .score {
+  position: relative;
   border-right: 1px solid #dadfea;
   border-bottom: 1px solid #dadfea;
   white-space: nowrap;
@@ -171,6 +192,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .container .landing-page .inside-blur .scoresheet .holes .score .score-input:last-child, .container .landing-page .inside-blur .scoresheet .player-scores .score .score-input:last-child {
   border: none;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score .yardage, .container .landing-page .inside-blur .scoresheet .player-scores .score .yardage {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 0.6em;
+  color: #dadfea;
 }
 .container .landing-page:after {
   content: "";

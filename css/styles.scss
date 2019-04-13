@@ -11,6 +11,27 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+::-webkit-input-placeholder {
+  font-size: .75em;
+  color: rgba(218, 223, 234, 1)
+}
+::-moz-placeholder {
+  font-size: .75em;
+  color: rgba(218, 223, 234, 1)
+
+}
+:-ms-input-placeholder {
+  font-size: .75em;
+  color: rgba(218, 223, 234, 1)
+
+}
+::placeholder {
+  font-size: .75em;
+  color: rgba(218, 223, 234, 1)
+
+}
+
+
 
 .flex-center {
   display: flex;
@@ -192,6 +213,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
           .score {
+            position: relative;
             border-right: 1px solid #dadfea;
             border-bottom: 1px solid #dadfea;
             white-space: nowrap;
@@ -214,6 +236,15 @@ input[type=number]::-webkit-outer-spin-button {
             }
             .score-input:last-child {
               border: none;
+            }
+            .yardage {
+              position: absolute;
+              bottom: 5px;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+              font-size: .6em;
+              color: #dadfea;
             }
           }
         }

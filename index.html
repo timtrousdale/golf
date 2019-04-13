@@ -11,14 +11,16 @@
   <script src="js/scripts.js" defer></script>
 </head>
 <body>
+  <button onclick="game.insOuts();">TEST</button>
+
   <div class="add-player-modal">
     <div class="flex">
       <div class="popup">
         <i class=" floating-close fas fa-times" onclick="hide()"></i>
         <input type="text" placeholder="Player Name">
         <input type="number" placeholder="Handicap" value="0">
-        <select id="tee-select"></select>
-        <button onclick="addPlayer('tim', 2, 'white')">Add Player</button>
+        <select aria-label="tee select" id="tee-select"></select>
+        <button onclick="game.addPlayer('tim', 2, 'white')">Add Player</button>
       </div>
     </div>
   </div>
@@ -27,7 +29,7 @@
     <div class="landing-page">
       <div class="inside-blur">
 
-        <select aria-label="course select dropdown" class="course-select" onchange="getCourse(this.value)">
+        <select aria-label="course select dropdown" class="course-select" onchange="game.getCourse(this.value)">
           <!--<option value="0" class="mobile-only">Tap to Select a Course</option>-->
           <option value="0" class="desktop">Select a Course</option>
           <option disabled="disabled">----</option>

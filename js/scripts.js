@@ -2,13 +2,12 @@
 //            Modal
 // *****************************
 function show() {
-    $('.add-player-modal').fadeIn(() => {
-    })
+    $('.add-player-modal').fadeIn(() => {});
+    $('#name-input').focus();
 }
 
 function hide() {
-    $('.add-player-modal').fadeOut(() => {
-    })
+    $('.add-player-modal').fadeOut(() => {});
 }
 
 

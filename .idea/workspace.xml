@@ -32,10 +32,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ToDo/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDo/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ToDo/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDo/css/styles.css.map" afterDir="false" />
@@ -65,7 +61,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="454">
+                <state relative-caret-position="619">
                   <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
                 </state>
               </provider>
@@ -78,8 +74,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/scripts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3020">
-                  <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+                <state relative-caret-position="133">
+                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#9296#9341#0" />
@@ -236,12 +232,12 @@
       <workItem from="1554434445870" duration="121000" />
       <workItem from="1554732533483" duration="10452000" />
       <workItem from="1555124362605" duration="17290000" />
-      <workItem from="1555208065717" duration="2898000" />
+      <workItem from="1555208065717" duration="3117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45596000" />
+    <option name="totallyTimeSpent" value="45815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -259,7 +255,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32923833" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -287,15 +283,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
+        <state relative-caret-position="619">
           <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3020">
-          <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#9296#9341#0" />

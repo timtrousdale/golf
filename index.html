@@ -17,15 +17,23 @@
     <div class="flex">
       <div class="popup">
         <i class=" floating-close fas fa-times" onclick="hide()"></i>
-        <input type="text" placeholder="Player Name" id="name-input">
-        <input type="number" placeholder="Handicap" value="0" id="handicap-input">
-        <label for="tee-select"></label>
-        <select aria-label="tee select" id="tee-select">
-          <option value="Men" selected>Men's Tee</option>
-          <option value="Women">Women's Tee</option>
-          <option value="Champion">Champion's Tee</option>
-          <option value="Pro">Professional Tee</option>
-        </select>
+        <div class="add-player-input">
+          <label for="name-input">Player Name:</label>
+          <input type="text" id="name-input">
+        </div>
+        <div class="add-player-input">
+          <label for="handicap-input">Handicap:</label>
+          <input type="number" value="0" id="handicap-input">
+        </div>
+        <div class="add-player-input">
+          <label for="tee-select">Select Tee:</label>
+          <select aria-label="tee select" id="tee-select">
+            <option value="3" selected>Men's Tee</option>
+            <option value="4">Women's Tee</option>
+            <option value="2">Champion's Tee</option>
+            <option value="1">Professional Tee</option>
+          </select>
+        </div>
         <button onclick="game.addPlayer($(`#name-input`).val(), $(`#handicap-input`).val(), $(`#tee-select`).val())">Add Player</button>
       </div>
     </div>
@@ -34,7 +42,6 @@
 
     <header>
       <select aria-label="course select dropdown" class="course-select" onchange="game.getCourse(this.value)">
-        <!--<option value="0" class="mobile-only">Tap to Select a Course</option>-->
         <option value="0" class="desktop">Select a Course</option>
         <option disabled="disabled">----</option>
       </select>
@@ -43,16 +50,12 @@
         <div class="course-address" id="course-address"></div>
         <div class="course-phone" id="course-phone"></div>
       </div>
-
     </header>
 
 
     <div class="landing-page">
       <div class="changeable-background">
         <div class="inside-blur">
-
-
-
           <div class="scoresheet">
             <div class="total">
               <div class="total-header">Total:</div>
@@ -61,8 +64,6 @@
               <div class="players-container">
                 <div class="players-header"><p>Players:</p></div>
                 <div class="players">
-
-
                 </div>
                 <div class="flex-center add-player">
                   <button onclick="show()">+ Add Player</button>

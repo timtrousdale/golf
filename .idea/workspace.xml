@@ -21,18 +21,6 @@
       <change afterPath="$PROJECT_DIR$/../Canvas/js/model.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Canvas/js/scripts.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Canvas/js/sprite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Golf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/timothy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/golf-course.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/panorama-2105955_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/semantic.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.js" afterDir="false" />
@@ -44,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
@@ -72,14 +59,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.465821">
+    <splitter split-orientation="horizontal" split-proportion="0.397463">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+                <state relative-caret-position="454">
+                  <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -91,11 +78,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/scripts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="166" column="330" selection-start-line="166" selection-start-column="330" selection-end-line="166" selection-end-column="330" />
+                <state relative-caret-position="3020">
+                  <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#3083#4210#0" />
+                    <element signature="e#9296#9341#0" />
                   </folding>
                 </state>
               </provider>
@@ -104,8 +91,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/styles.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="335" column="22" lean-forward="true" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+                <state relative-caret-position="-1076">
+                  <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -116,9 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
-      <find>height</find>
-      <find>floating-close</find>
       <find>show</find>
       <find>over</find>
       <find>players</find>
@@ -138,7 +122,6 @@
       <find>player</find>
       <find>-message</find>
       <find>holeCount</find>
-      <find>setPlayerParsAndYardage</find>
       <find>score(</find>
       <find>at le</find>
       <find>player-tot</find>
@@ -146,6 +129,10 @@
       <find>header</find>
       <find>handicap</find>
       <find>yards</find>
+      <find>input</find>
+      <find>console</find>
+      <find>setParsAndYardage</find>
+      <find>setPlayerParsAndYardage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,8 +142,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/styles.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
       </list>
     </option>
@@ -249,14 +236,16 @@
       <workItem from="1554434445870" duration="121000" />
       <workItem from="1554732533483" duration="10452000" />
       <workItem from="1555124362605" duration="17290000" />
+      <workItem from="1555208065717" duration="2898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42698000" />
+    <option name="totallyTimeSpent" value="45596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21916842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -270,7 +259,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32923833" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32923833" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -289,27 +278,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="-1076">
+          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.scss">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="335" column="22" lean-forward="true" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+        <state relative-caret-position="454">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="166" column="330" selection-start-line="166" selection-start-column="330" selection-end-line="166" selection-end-column="330" />
+        <state relative-caret-position="3020">
+          <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#3083#4210#0" />
+            <element signature="e#9296#9341#0" />
           </folding>
         </state>
       </provider>

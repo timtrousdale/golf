@@ -64,6 +64,21 @@ input[type=number]::-webkit-outer-spin-button {
   height: 200px;
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.add-player-modal .flex .popup input, .add-player-modal .flex .popup select, .add-player-modal .flex .popup button {
+  font-size: 1em;
+}
+.add-player-modal .flex .popup button {
+  background-color: lightgreen;
+}
+.add-player-modal .flex .popup .add-player-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .add-player-modal .flex .popup .floating-close {
   cursor: pointer;

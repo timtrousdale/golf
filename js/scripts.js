@@ -27,16 +27,11 @@ class Course {
 
     }
 
-    //TODO MAKE COURSE INFO APPEAR
-    updateCourseInfo() {
-
-    }
-
+    //Set Pars, yardage, and hcp for all players when a course is selected
     setParsAndYardage() {
 
-        //Inserts PAR Placeholder for the score inputs
+        //Updates PAR Placeholder Attr for the score inputs
         if (this.data.holeCount && this.data.holes) {
-
             for (let i = 0; i < this.players.length; i++) {
                 this.players[i].setPlayerParsAndYardage(this.data.holeCount, this.data.holes)
             }
@@ -44,8 +39,8 @@ class Course {
 
     }
 
+    //Updates total scores for inner and outer holes
     insOuts() {
-
         for (let i = 0; i < this.players.length; i++) {
 
             //Grabs holes 1-9 and calculates IN
@@ -72,6 +67,7 @@ class Course {
         }
     }
 
+    // Loads new coarse and updates Course Info, Background image, par/yardage/hcp
     getCourse(id) {
         if (id !== '0') {
             fetch(`https://golf-courses-api.herokuapp.com/courses/${id}`)
@@ -83,42 +79,16 @@ class Course {
 
                     this.setParsAndYardage();
 
-
-                    //TODO make this update overlay with course info
+                    // Updates Course info
                     $('#course-name').html(`${this.data.name}`);
                     $('#course-address').html(`${this.data.addr1}, ${this.data.city}`);
                     $('#course-phone').html(`${this.data.phone}`);
                     $('.changeable-background').css('background-image', `url(${this.data.thumbnail})`);
-
-
                 })
         }
     }
 
-    //TODO DELETE this placeholder info
-
-    // let b = {
-    //     addr1: "1400 N 200 E",
-    //     addr2: null,
-    //     city: "American Fork",
-    //     country: "United States",
-    //     courseId: 18300,
-    //     holeCount: 18,
-    //     holes: [],
-    //     id: "18300",
-    //     lat: 40.4031413225741,
-    //     lng: -111.787138581276,
-    //     name: "Fox Hollow Golf Club",
-    //     phone: "(801) 756-3594",
-    //     stateOrProvince: "UT",
-    //     thumbnail: "https://swingbyswing-b9.s3.amazonaws.com/photo/in-round/12486769/uploaded-photo43828077-480x360.png",
-    //     website: "http://www.foxhollowutah.com/",
-    //     zipCode: "84003",
-    // };
-
     addPlayer(name, handicap, tee) {
-
-
         let playerID = this.numberOfPlayers;
         this.players.push(new Player(name, handicap, tee, playerID));
         this.players[playerID].createPlayerScorecard(name, handicap, tee, playerID);
@@ -157,6 +127,7 @@ class Player {
         this.id = id;
     }
 
+    // Loads the html fields for new player
     createPlayerScorecard() {
 
         $('.score-column').append(`<div class="player-scores player-${this.id}-scores"></div>`);
@@ -183,22 +154,23 @@ class Player {
         this.pars = [];
         this.yards = [];
         this.hcp = [];
+        let tee = 0;
+        for (let i = 0; i < holes[0].teeBoxes.length; i++) {
+            if (holes[0].teeBoxes[i].teeTypeId === this.tee) {
+                tee = i;
+            }
+        }
         for (let i = 0; i < holeCount; i++) {
             let hole = holes[i].teeBoxes;
-            let teeTypes = {
-                Pro: 0,
-                Champion: 0,
-                Men: 0,
-                Women: 0
-            };
 
-            for (let j = 0; j < hole.length; j++) {
-                teeTypes[hole[j].teeType] = j;
-            }
 
-            let par = hole[teeTypes[this.tee]].par;
-            let yards = hole[teeTypes[this.tee]].yards;
-            let hcp = hole[teeTypes[this.tee]].hcp;
+            console.log(tee);
+
+            // console.log(teeTypes);
+
+            let par = hole[tee].par;
+            let yards = hole[tee].yards;
+            let hcp = hole[tee].hcp;
             this.pars.push(par);
             this.yards.push(yards);
             this.hcp.push(hcp);
@@ -283,7 +255,7 @@ class Player {
             }
         });
 
-    // Builds Hole Columns
+    // Builds Score Card Headers
     for (let i = 0; i < 18; i++) {
         let nth;
         switch (i) {
@@ -302,7 +274,7 @@ class Player {
         $('.holes').append(`<div class="hole" id="hole-${i}"><div class="hole-number">${i + 1}<span></span>${nth}</span></div></div>`);
     }
 
-    // Adds IN and OUT columns
+    // Adds IN and OUT column Headers
     $(".holes > div:nth-child(9)").after(`<div class="hole" id=""><div class="hole-number">IN</span></div></div>`);
     $(".holes").append(`<div class="hole" id=""><div class="hole-number">OUT</span></div></div>`);
 })();
@@ -322,7 +294,7 @@ function isFilled(array) {
 
 let game = new Course();
 
-
-// TODO Remove this, it's for testing
-game.addPlayer('tim', 2, 'Champion');
-// game.addPlayer('timmy', 2, 'Men');
+game.addPlayer('men', 0, 3);
+game.addPlayer('women', 0, 4);
+game.addPlayer('champ', 0, 2);
+game.addPlayer('pro', 0, 1);

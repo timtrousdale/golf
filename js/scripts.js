@@ -2,12 +2,17 @@
 //            Modal
 // *****************************
 function show() {
-    $('.add-player-modal').fadeIn(() => {});
+    $('.add-player-modal').fadeIn(() => {
+    });
     $('#name-input').focus();
 }
 
 function hide() {
-    $('.add-player-modal').fadeOut(() => {});
+    $('.add-player-modal').fadeOut(() => {
+    });
+    $('#name-input').val('');
+    $('#handicap-input').val(0);
+
 }
 
 
@@ -288,6 +293,32 @@ function isFilled(array) {
         }
     }
     return filled;
+}
+
+function checkName(name, players) {
+    let button = $('#add-player-button');
+    if (players.length !== undefined) {
+        for (let i = 0; i < players.length; i++) {
+            if (players[i].name === name) {
+                button.attr('disabled', true);
+                button.html('That Name is Taken');
+                button.css('color', 'red');
+                return;
+            } else {
+                button.removeAttr('disabled');
+                button.html('+Add Player');
+                button.css('color', 'black');
+            }
+        }
+    }
+    // this.players[id].rename(name, false);
+    //
+    // if (nameTaken === true) {
+    //     $(`#${this.id}`).html(this.name);
+    // } else {
+    //     this.name = name;
+    //     $(`#${this.id}`).html(name);
+    // }
 }
 
 let game = new Course();

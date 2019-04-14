@@ -17,8 +17,8 @@
       <div class="popup">
         <i class=" floating-close fas fa-times" onclick="hide()"></i>
         <div class="add-player-input">
-          <label for="name-input">Player Name:</label>
-          <input type="text" id="name-input">
+          <label for="name-input" >Player Name:</label>
+          <input type="text" id="name-input" onkeyup="checkName(this.value, game.players)">
         </div>
         <div class="add-player-input">
           <label for="handicap-input">Handicap:</label>
@@ -33,7 +33,7 @@
             <option value="1">Professional Tee</option>
           </select>
         </div>
-        <button onclick="game.addPlayer($(`#name-input`).val(), $(`#handicap-input`).val(), $(`#tee-select`).val())">Add Player</button>
+        <button id="add-player-button" onclick="game.addPlayer($(`#name-input`).val(), $(`#handicap-input`).val(), $(`#tee-select`).val())">+Add Player</button>
       </div>
     </div>
   </div>

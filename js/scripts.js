@@ -27,6 +27,11 @@ class Course {
 
     }
 
+    //TODO MAKE COURSE INFO APPEAR
+    updateCourseInfo () {
+
+    }
+
     setParsAndYardage() {
 
         //Inserts PAR Placeholder for the score inputs
@@ -141,10 +146,10 @@ class Player {
         $(`.player-${this.id}-scores`).append(`<div class="score" id="${this.id}-out"><input readonly class="score-input" type="number"></div>`);
 
         //Adds NAME box
-        $(".players").append(`<div class="player player-${this.id}" id="${this.id}" contenteditable onfocusout="game.changePlayerName($(this)[0].innerHTML, ${this.id})">${this.name}</div>`);
+        $(".players").append(`<div class="player player-${this.id}" id="${this.id}" contenteditable onfocusout="game.changePlayerName($(this)[0].innerHTML, ${this.id})">${this.name}<div class="handicap">handicap: ${this.handicap}</div></div>`);
 
         //Adds TOTAL box
-        $(".total").append(`<div class="player-total" id="${this.id}-total"></div>`);
+        $(".total").append(`<div class="player-total"><p id="${this.id}-total"></p></div>`);
     }
 
     setPlayerParsAndYardage(holeCount, holes) {
@@ -215,17 +220,16 @@ class Player {
         for (let i = 0; i < this.scores.length; i++) {
             if (this.scores[i]) {
                 console.log('ran2');
-                this.total += (this.scores[i] - this.pars[i])
+                this.total += (this.scores[i] - this.pars[i] - this.handicap)
             }
         }
+        console.log(this.total);
         $(`#${this.id}-total`).html(this.total);
     }
 
 
 }
 
-
-//Pro-1, champion- 2, men -3, women-4
 
 // *****************************
 //           MAIN JS

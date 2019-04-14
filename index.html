@@ -11,16 +11,22 @@
   <script src="js/scripts.js" defer></script>
 </head>
 <body>
-  <button onclick="game.insOuts();">TEST</button>
 
+  <!--TODO FIX MODAL AND INPUTS-->
   <div class="add-player-modal">
     <div class="flex">
       <div class="popup">
         <i class=" floating-close fas fa-times" onclick="hide()"></i>
-        <input type="text" placeholder="Player Name">
-        <input type="number" placeholder="Handicap" value="0">
-        <select aria-label="tee select" id="tee-select"></select>
-        <button onclick="game.addPlayer('tim', 2, 'white')">Add Player</button>
+        <input type="text" placeholder="Player Name" id="name-input">
+        <input type="number" placeholder="Handicap" value="0" id="handicap-input">
+        <label for="tee-select"></label>
+        <select aria-label="tee select" id="tee-select">
+          <option value="Men" selected>Men's Tee</option>
+          <option value="Women">Women's Tee</option>
+          <option value="Champion">Champion's Tee</option>
+          <option value="Pro">Professional Tee</option>
+        </select>
+        <button onclick="game.addPlayer($(`#name-input`).val(), $(`#handicap-input`).val(), $(`#tee-select`).val())">Add Player</button>
       </div>
     </div>
   </div>

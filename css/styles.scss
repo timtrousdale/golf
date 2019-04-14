@@ -130,6 +130,17 @@ input[type=number]::-webkit-outer-spin-button {
             text-align: center;
             border-bottom: 1px solid #dadfea;
             height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+            font-size: 2em;
+              padding: 0;
+              margin: 0;
+              color: darkblue;
+
+            }
 
           }
         }
@@ -142,6 +153,7 @@ input[type=number]::-webkit-outer-spin-button {
           flex-direction: column;
           justify-content: flex-end;
 
+
           .players-header {
             text-align: center;
             border-bottom: 1px solid #dadfea;
@@ -152,11 +164,21 @@ input[type=number]::-webkit-outer-spin-button {
 
 
             .player {
-              padding: 13px 13px 14px 13px;
-              font-size: 2em;
-
-              //TODO Fix This
+              padding: 13px 13px 18px 13px;
+              font-size: 1.75em;
               border-bottom: 1px solid #dadfea;
+              position: relative;
+
+              .handicap {
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                font-size: .4em;
+                color: #dadfea;
+                text-wrap: none;
+              }
             }
 
           }
@@ -173,6 +195,7 @@ input[type=number]::-webkit-outer-spin-button {
           display: flex;
           flex-direction: column;
           overflow: scroll;
+          border-left: 3px solid #dadfea;
         }
 
         .holes, .player-scores {
@@ -231,7 +254,6 @@ input[type=number]::-webkit-outer-spin-button {
               width: 67px;
               height: 62px;
               font-size: 1.5em;
-              border-bottom: 1px solid #dadfea;
 
             }
             .score-input:last-child {

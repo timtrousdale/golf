@@ -77,7 +77,6 @@ class Course {
             fetch(`https://golf-courses-api.herokuapp.com/courses/${id}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     this.data = data.data;
                     this.pars = [];
                     this.yardages = [];
@@ -207,7 +206,6 @@ class Player {
             $(`#${this.id}-${i}-yards`).html(`${yards} yards`);
             $(`#${this.id}-${i}-hcp`).html(`hcp: ${hcp} `);
         }
-        console.log(this.yards);
 
     }
 
@@ -251,11 +249,8 @@ class Player {
         this.total = 0;
         for (let i = 0; i < this.scores.length; i++) {
             if (this.scores[i]) {
-                console.log('ran2');
                 this.total += (this.scores[i] - this.pars[i])
             }
-
-
         }
         if (this.total < 0) {
             message = 'Huzzah!'
@@ -268,7 +263,7 @@ class Player {
             $(`#${this.id}-message`).html(`${message}`);
         }
 
-        $(`#${this.id}-total`).html(this.total - this.handicap);
+        $(`#${this.id}-total`).html(this.total);
     }
 }
 
@@ -283,7 +278,6 @@ class Player {
     fetch('https://golf-courses-api.herokuapp.com/courses')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             for (let i = 0; i < data.courses.length; i++) {
                 $('.course-select').append(`<option value="${data.courses[i].id}">${data.courses[i].name}</option>`);
             }
@@ -313,6 +307,8 @@ class Player {
     $(".holes").append(`<div class="hole" id=""><div class="hole-number">OUT</span></div></div>`);
 })();
 
+//Check to see if an array has no empty slots
+// Used to make sure that a player has finished all holes before displaying congrats message
 function isFilled(array) {
     let filled = true;
     for (let i = 0; i < array.length; i++) {

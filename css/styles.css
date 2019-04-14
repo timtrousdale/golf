@@ -74,6 +74,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .add-player-modal .flex .popup button {
   background-color: lightgreen;
+  margin-top: 30px;
 }
 .add-player-modal .flex .popup .add-player-input {
   display: flex;

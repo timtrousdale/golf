@@ -290,5 +290,4 @@ function isFilled(array) {
     return filled;
 }
 
-
 let game = new Course();

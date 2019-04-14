@@ -292,8 +292,3 @@ function isFilled(array) {
 
 
 let game = new Course();
-
-game.addPlayer('men', 0, 3);
-game.addPlayer('women', 0, 4);
-game.addPlayer('champ', 0, 2);
-game.addPlayer('pro', 0, 1);

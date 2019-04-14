@@ -32,6 +32,10 @@ input[type=number]::-webkit-outer-spin-button {
   color: #dadfea;
 }
 
+.relative {
+  position: relative;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -76,11 +80,54 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
   padding: 0;
 }
+.container header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  background-color: #165b13;
+}
+.container header .course-select {
+  padding: 10px;
+  font-size: 1.5em;
+  margin: 10px;
+}
+.container header .header-info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.container header .header-info .course-name {
+  font-size: 1.5em;
+  white-space: nowrap;
+}
+.container header .header-info .course-address {
+  font-size: 1em;
+  white-space: nowrap;
+}
+.container header .header-info .course-phone {
+  font-size: 1em;
+  white-space: nowrap;
+}
 .container .landing-page {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
+  background-color: #165b13;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .landing-page .changeable-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
   background-image: url("../img/golf-course.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -90,15 +137,11 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.container .landing-page .inside-blur .course-select {
-  padding: 10px;
-  font-size: 1.5em;
-  margin: 50px;
+  justify-content: center;
 }
 .container .landing-page .inside-blur .scoresheet {
   background-color: white;
@@ -131,6 +174,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
   color: darkblue;
 }
+.container .landing-page .inside-blur .scoresheet .message {
+  position: absolute;
+  top: -30%;
+  left: 120%;
+  border: 2px solid #dadfea;
+  border-radius: 10px 10px 10px 0;
+  white-space: nowrap;
+  background-color: lightgreen;
+  padding: 5px;
+  z-index: 99;
+  visibility: hidden;
+}
 .container .landing-page .inside-blur .scoresheet .players-container {
   border-top: 1px solid #dadfea;
   padding: 0 10px 10px 10px;
@@ -147,17 +202,16 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 13px 13px 18px 13px;
   font-size: 1.75em;
   border-bottom: 1px solid #dadfea;
-  position: relative;
 }
-.container .landing-page .inside-blur .scoresheet .players-container .players .player .handicap {
+.container .landing-page .inside-blur .scoresheet .players-container .players .handicap {
   position: absolute;
   bottom: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  font-size: 0.4em;
+  font-size: 0.8em;
   color: #dadfea;
-  text-wrap: none;
+  white-space: nowrap;
 }
 .container .landing-page .inside-blur .scoresheet .players-container .add-player {
   padding-top: 25px;
@@ -216,6 +270,15 @@ input[type=number]::-webkit-outer-spin-button {
 .container .landing-page .inside-blur .scoresheet .holes .score .yardage, .container .landing-page .inside-blur .scoresheet .player-scores .score .yardage {
   position: absolute;
   bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 0.6em;
+  color: #dadfea;
+}
+.container .landing-page .inside-blur .scoresheet .holes .score .hcp, .container .landing-page .inside-blur .scoresheet .player-scores .score .hcp {
+  position: absolute;
+  top: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);

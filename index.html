@@ -32,34 +32,48 @@
   </div>
   <div class="container">
 
+    <header>
+      <select aria-label="course select dropdown" class="course-select" onchange="game.getCourse(this.value)">
+        <!--<option value="0" class="mobile-only">Tap to Select a Course</option>-->
+        <option value="0" class="desktop">Select a Course</option>
+        <option disabled="disabled">----</option>
+      </select>
+      <div class="header-info">
+        <div class="course-name" id="course-name"></div>
+        <div class="course-address" id="course-address"></div>
+        <div class="course-phone" id="course-phone"></div>
+      </div>
+
+    </header>
+
+
     <div class="landing-page">
-      <div class="inside-blur">
+      <div class="changeable-background">
+        <div class="inside-blur">
 
-        <select aria-label="course select dropdown" class="course-select" onchange="game.getCourse(this.value)">
-          <!--<option value="0" class="mobile-only">Tap to Select a Course</option>-->
-          <option value="0" class="desktop">Select a Course</option>
-          <option disabled="disabled">----</option>
-        </select>
-
-        <div class="scoresheet">
-          <div class="total">
-            <div class="total-header">Total:</div>
-          </div>
-          <div>
-            <div class="players-container">
-              <div class="players-header"><p>Players:</p></div>
-              <div class="players">
+          <!--<div ><img class="course-image" id="course-image" src="https://swingbyswing-b9.s3.amazonaws.com/photo/in-round/12486769/uploaded-photo43828077-480x360.png"></div>-->
 
 
-              </div>
-              <div class="flex-center add-player">
-                <button onclick="show()">+ Add Player</button>
+          <div class="scoresheet">
+            <div class="total">
+              <div class="total-header">Total:</div>
+            </div>
+            <div>
+              <div class="players-container">
+                <div class="players-header"><p>Players:</p></div>
+                <div class="players">
+
+
+                </div>
+                <div class="flex-center add-player">
+                  <button onclick="show()">+ Add Player</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="score-column">
+            <div class="score-column">
 
-            <div class="holes">
+              <div class="holes">
+              </div>
             </div>
           </div>
         </div>

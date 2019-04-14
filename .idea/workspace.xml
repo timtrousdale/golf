@@ -21,6 +21,18 @@
       <change afterPath="$PROJECT_DIR$/../Canvas/js/model.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Canvas/js/scripts.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Canvas/js/sprite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Golf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/timothy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/golf-course.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/panorama-2105955_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/semantic.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Scratches/test.js" afterDir="false" />
@@ -32,6 +44,7 @@
       <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.scss" afterDir="false" />
@@ -59,14 +72,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4883721">
+    <splitter split-orientation="horizontal" split-proportion="0.465821">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="501">
-                  <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+                <state relative-caret-position="162">
+                  <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -75,28 +88,24 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/scripts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="148" column="213" selection-start-line="148" selection-start-column="213" selection-end-line="148" selection-end-column="213" />
+                <state relative-caret-position="298">
+                  <caret line="203" column="35" lean-forward="true" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#!!block;n#insOuts#0;n#Course#0" />
-                    <element signature="n#!!block;n#getCourse#0;n#Course#0" />
-                    <element signature="n#!!block;n#setPlayerParsAndYardage#0;n#Player#0" />
                     <element signature="e#3083#4210#0" />
-                    <element signature="e#4289#4796#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/styles.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="133">
-                  <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+                <state relative-caret-position="242">
+                  <caret line="253" column="14" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -107,8 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>xhtt</find>
-      <find>hole</find>
       <find>width</find>
       <find>height</find>
       <find>floating-close</find>
@@ -117,17 +124,28 @@
       <find>players</find>
       <find>numberofplayer</find>
       <find>name</find>
-      <find>fetch</find>
       <find>setpa</find>
       <find>this.pars</find>
-      <find>holeCount</find>
       <find>score</find>
-      <find>total</find>
       <find>playerID</find>
       <find>absol</find>
-      <find>handicap</find>
-      <find>player</find>
       <find>yardage</find>
+      <find>total</find>
+      <find>content</find>
+      <find>holes</find>
+      <find>setTotal</find>
+      <find>-scores</find>
+      <find>player</find>
+      <find>-message</find>
+      <find>holeCount</find>
+      <find>setPlayerParsAndYardage</find>
+      <find>score(</find>
+      <find>at le</find>
+      <find>player-tot</find>
+      <find>fetch</find>
+      <find>header</find>
+      <find>handicap</find>
+      <find>yards</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,8 +156,8 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/scripts.js" />
         <option value="$PROJECT_DIR$/css/styles.scss" />
+        <option value="$PROJECT_DIR$/js/scripts.js" />
       </list>
     </option>
   </component>
@@ -230,12 +248,12 @@
       <workItem from="1554125959369" duration="14835000" />
       <workItem from="1554434445870" duration="121000" />
       <workItem from="1554732533483" duration="10452000" />
-      <workItem from="1555124362605" duration="10835000" />
+      <workItem from="1555124362605" duration="17034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36243000" />
+    <option name="totallyTimeSpent" value="42442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -274,30 +292,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="148" column="213" selection-start-line="148" selection-start-column="213" selection-end-line="148" selection-end-column="213" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#insOuts#0;n#Course#0" />
-            <element signature="n#!!block;n#getCourse#0;n#Course#0" />
-            <element signature="n#!!block;n#setPlayerParsAndYardage#0;n#Player#0" />
-            <element signature="e#3083#4210#0" />
-            <element signature="e#4289#4796#0" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="242">
+          <caret line="253" column="14" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="203" column="35" lean-forward="true" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3083#4210#0" />
+          </folding>
         </state>
       </provider>
     </entry>

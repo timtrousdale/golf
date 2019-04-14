@@ -28,7 +28,7 @@ class Course {
     }
 
     //TODO MAKE COURSE INFO APPEAR
-    updateCourseInfo () {
+    updateCourseInfo() {
 
     }
 
@@ -86,9 +86,36 @@ class Course {
 
 
                     //TODO make this update overlay with course info
-                });
+                    $('#course-name').html(`${this.data.name}`);
+                    $('#course-address').html(`${this.data.addr1}, ${this.data.city}`);
+                    $('#course-phone').html(`${this.data.phone}`);
+                    $('.changeable-background').css('background-image', `url(${this.data.thumbnail})`);
+
+
+                })
         }
     }
+
+    //TODO DELETE this placeholder info
+
+    // let b = {
+    //     addr1: "1400 N 200 E",
+    //     addr2: null,
+    //     city: "American Fork",
+    //     country: "United States",
+    //     courseId: 18300,
+    //     holeCount: 18,
+    //     holes: [],
+    //     id: "18300",
+    //     lat: 40.4031413225741,
+    //     lng: -111.787138581276,
+    //     name: "Fox Hollow Golf Club",
+    //     phone: "(801) 756-3594",
+    //     stateOrProvince: "UT",
+    //     thumbnail: "https://swingbyswing-b9.s3.amazonaws.com/photo/in-round/12486769/uploaded-photo43828077-480x360.png",
+    //     website: "http://www.foxhollowutah.com/",
+    //     zipCode: "84003",
+    // };
 
     addPlayer(name, handicap, tee) {
 
@@ -100,6 +127,7 @@ class Course {
 
         this.numberOfPlayers++;
         this.setParsAndYardage();
+        hide();
 
     }
 
@@ -136,7 +164,7 @@ class Player {
 
         for (let i = 0; i < 18; i++) {
             //Makes 18 Score fields
-            $(`.player-${this.id}-scores`).append(`<div class="score" id="${this.id}-${i}-score"><input class="score-input" type="number" placeholder="par " onchange="game.players[${this.id}].score(${i}, this.value)"><div id="${this.id}-${i}-yards" class="yardage">Yards</div></div>`);
+            $(`.player-${this.id}-scores`).append(`<div class="score" id="${this.id}-${i}-score"><input class="score-input" type="number" placeholder="" onchange="game.players[${this.id}].score(${i}, this.value, game.data.holeCount)"><div id="${this.id}-${i}-yards" class="yardage"></div><div class="hcp" id="${this.id}-${i}-hcp"></div></div>`);
         }
 
         //Adds IN box
@@ -146,16 +174,16 @@ class Player {
         $(`.player-${this.id}-scores`).append(`<div class="score" id="${this.id}-out"><input readonly class="score-input" type="number"></div>`);
 
         //Adds NAME box
-        $(".players").append(`<div class="player player-${this.id}" id="${this.id}" contenteditable onfocusout="game.changePlayerName($(this)[0].innerHTML, ${this.id})">${this.name}<div class="handicap">handicap: ${this.handicap}</div></div>`);
+        $(".players").append(`<div class="relative"><div class="player player-${this.id}" id="${this.id}" contenteditable onfocusout="game.changePlayerName($(this)[0].innerHTML, ${this.id})">${this.name}</div><div class="handicap" contenteditable="false">handicap: ${this.handicap}</div></div>`);
 
         //Adds TOTAL box
-        $(".total").append(`<div class="player-total"><p id="${this.id}-total"></p></div>`);
+        $(".total").append(`<div class="relative"><div class="player-total"><p id="${this.id}-total"></p></div><div class="message" id="${this.id}-message"></div></div>`);
     }
 
     setPlayerParsAndYardage(holeCount, holes) {
-        console.log(holes);
         this.pars = [];
         this.yards = [];
+        this.hcp = [];
         for (let i = 0; i < holeCount; i++) {
             let hole = holes[i].teeBoxes;
             let teeTypes = {
@@ -171,19 +199,22 @@ class Player {
 
             let par = hole[teeTypes[this.tee]].par;
             let yards = hole[teeTypes[this.tee]].yards;
+            let hcp = hole[teeTypes[this.tee]].hcp;
             this.pars.push(par);
             this.yards.push(yards);
-            $(`#${this.id}-${i}-score`).children().attr('placeholder', `par-${par}`);
+            this.hcp.push(hcp);
+            $(`#${this.id}-${i}-score`).children().attr('placeholder', `PAR-${par}`);
             $(`#${this.id}-${i}-yards`).html(`${yards} yards`);
+            $(`#${this.id}-${i}-hcp`).html(`hcp: ${hcp} `);
         }
         console.log(this.yards);
 
     }
 
-    score(hole, score) {
+    score(hole, score, holeCount) {
         this.scores[hole] = score;
         this.setInOut();
-        this.setTotal();
+        this.setTotal(holeCount);
     }
 
     rename(name, nameTaken) {
@@ -214,20 +245,31 @@ class Player {
 
     }
 
-    setTotal() {
+    setTotal(holeCount) {
+        let message;
+
         this.total = 0;
-        console.log('ran');
         for (let i = 0; i < this.scores.length; i++) {
             if (this.scores[i]) {
                 console.log('ran2');
-                this.total += (this.scores[i] - this.pars[i] - this.handicap)
+                this.total += (this.scores[i] - this.pars[i])
             }
+
+
         }
-        console.log(this.total);
-        $(`#${this.id}-total`).html(this.total);
+        if (this.total < 0) {
+            message = 'Huzzah!'
+        } else {
+            message = 'Not Bad!'
+        }
+
+        if (this.scores.length === holeCount && isFilled(this.scores)) {
+            $(`#${this.id}-message`).css(`visibility`, `visible`);
+            $(`#${this.id}-message`).html(`${message}`);
+        }
+
+        $(`#${this.id}-total`).html(this.total - this.handicap);
     }
-
-
 }
 
 
@@ -271,31 +313,20 @@ class Player {
     $(".holes").append(`<div class="hole" id=""><div class="hole-number">OUT</span></div></div>`);
 })();
 
+function isFilled(array) {
+    let filled = true;
+    for (let i = 0; i < array.length; i++) {
+        if (!array[i]) {
+            filled = false;
+        }
+    }
+    return filled;
+}
+
 
 let game = new Course();
 
 
-//TODO DELETE this placeholder info
-let b = {
-    addr1: "1400 N 200 E",
-    addr2: null,
-    city: "American Fork",
-    country: "United States",
-    courseId: 18300,
-    holeCount: 18,
-    holes: [],
-    id: "18300",
-    lat: 40.4031413225741,
-    lng: -111.787138581276,
-    name: "Fox Hollow Golf Club",
-    phone: "(801) 756-3594",
-    stateOrProvince: "UT",
-    thumbnail: "https://swingbyswing-b9.s3.amazonaws.com/photo/in-round/12486769/uploaded-photo43828077-480x360.png",
-    website: "http://www.foxhollowutah.com/",
-    zipCode: "84003",
-};
-
-
 // TODO Remove this, it's for testing
 game.addPlayer('tim', 2, 'Champion');
-game.addPlayer('timmy', 2, 'Men');
+// game.addPlayer('timmy', 2, 'Men');
